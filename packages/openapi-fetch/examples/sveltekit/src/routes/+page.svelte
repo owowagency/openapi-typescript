@@ -5,7 +5,7 @@
   let fact: Awaited<ReturnType<typeof getFact>> | undefined;
 
   async function getFact() {
-    return client.GET("/fact", {
+    return client.get("/fact", {
       params: {
         query: { max_length: 500 },
       },

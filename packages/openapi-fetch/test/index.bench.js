@@ -43,7 +43,7 @@ describe("get (only URL)", () => {
   });
 
   bench("openapi-fetch", async () => {
-    await openapiFetch.GET("/url");
+    await openapiFetch.get("/url");
   });
 
   bench("openapi-typescript-fetch", async () => {
@@ -78,7 +78,7 @@ describe("get (headers)", () => {
   });
 
   bench("openapi-fetch", async () => {
-    await openapiFetch.GET("/url", {
+    await openapiFetch.get("/url", {
       headers: { "x-header-1": 123, "x-header-2": 456 },
     });
   });

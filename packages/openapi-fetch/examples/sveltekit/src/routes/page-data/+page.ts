@@ -4,7 +4,7 @@ import client from "$lib/api/index.js";
 // native fetch works, too. See Svelte’s docs to learn the difference:
 // @see https://kit.svelte.dev/docs/load#making-fetch-requests
 export async function load({ fetch }) {
-  const fact = await client.GET("/fact", {
+  const fact = await client.get("/fact", {
     params: { query: { max_length: 500 } },
     fetch,
   });

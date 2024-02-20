@@ -2,7 +2,7 @@ import React from "react";
 import client from "../lib/api";
 
 async function getFact() {
-  return await client.GET("/fact", {
+  return await client.get("/fact", {
     params: {
       query: { max_length: 500 },
     },

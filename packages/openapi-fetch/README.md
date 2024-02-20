@@ -21,13 +21,13 @@ const client = createClient<paths>({ baseUrl: "https://myapi.dev/v1/" });
 const {
   data, // only present if 2XX response
   error, // only present if 4XX or 5XX response
-} = await client.GET("/blogposts/{post_id}", {
+} = await client.get("/blogposts/{post_id}", {
   params: {
     path: { post_id: "123" },
   },
 });
 
-await client.PUT("/blogposts", {
+await client.put("/blogposts", {
   body: {
     title: "My New Post",
   },
@@ -92,14 +92,14 @@ import type { paths } from "./api/v1";
 
 const client = createClient<paths>({ baseUrl: "https://myapi.dev/v1/" });
 
-const { data, error } = await client.GET("/blogposts/{post_id}", {
+const { data, error } = await client.get("/blogposts/{post_id}", {
   params: {
     path: { post_id: "my-post" },
     query: { version: 2 },
   },
 });
 
-const { data, error } = await client.PUT("/blogposts", {
+const { data, error } = await client.put("/blogposts", {
   body: {
     title: "New Post",
     body: "<p>New post body</p>",

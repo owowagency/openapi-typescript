@@ -141,7 +141,7 @@ const authMiddleware: Middleware = {
 const client = createClient<paths>({ baseUrl: "https://myapi.dev/v1/" });
 client.use(authMiddleware);
 
-const authRequest = await client.GET("/some/auth/url");
+const authRequest = await client.get("/some/auth/url");
 ```
 
 ### Conditional auth

@@ -147,35 +147,35 @@ export default function createClient(clientOptions) {
 
   return {
     /** Call a GET endpoint */
-    async GET(url, init) {
+    async get(url, init) {
       return coreFetch(url, { ...init, method: "GET" });
     },
     /** Call a PUT endpoint */
-    async PUT(url, init) {
+    async put(url, init) {
       return coreFetch(url, { ...init, method: "PUT" });
     },
     /** Call a POST endpoint */
-    async POST(url, init) {
+    async post(url, init) {
       return coreFetch(url, { ...init, method: "POST" });
     },
     /** Call a DELETE endpoint */
-    async DELETE(url, init) {
+    async delete(url, init) {
       return coreFetch(url, { ...init, method: "DELETE" });
     },
     /** Call a OPTIONS endpoint */
-    async OPTIONS(url, init) {
+    async options(url, init) {
       return coreFetch(url, { ...init, method: "OPTIONS" });
     },
     /** Call a HEAD endpoint */
-    async HEAD(url, init) {
+    async head(url, init) {
       return coreFetch(url, { ...init, method: "HEAD" });
     },
     /** Call a PATCH endpoint */
-    async PATCH(url, init) {
+    async patch(url, init) {
       return coreFetch(url, { ...init, method: "PATCH" });
     },
     /** Call a TRACE endpoint */
-    async TRACE(url, init) {
+    async trace(url, init) {
       return coreFetch(url, { ...init, method: "TRACE" });
     },
     /** Register middleware */

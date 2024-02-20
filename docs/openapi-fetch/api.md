@@ -23,10 +23,10 @@ createClient<paths>(options);
 
 ## Fetch options
 
-The following options apply to all request methods (`.GET()`, `.POST()`, etc.)
+The following options apply to all request methods (`.get()`, `.post()`, etc.)
 
 ```ts
-client.GET("/my-url", options);
+client.get("/my-url", options);
 ```
 
 | Name              | Type                                                              | Description                                                                                                                                                                                                                       |
@@ -128,7 +128,7 @@ When serializing yourself, the string will be kept exactly as-authored, so youâ€
 Similar to [querySerializer](#queryserializer), bodySerializer allows you to customize how the requestBody is serialized if you donâ€™t want the default [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) behavior. You probably only need this when using `multipart/form-data`:
 
 ```ts
-const { data, error } = await client.PUT("/submit", {
+const { data, error } = await client.put("/submit", {
   body: {
     name: "",
     query: { version: 2 },

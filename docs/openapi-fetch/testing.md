@@ -23,7 +23,7 @@ test("my request", async () => {
   });
 
   const reqBody = { name: "test" };
-  await client.PUT("/tag", { body: reqBody });
+  await client.put("/tag", { body: reqBody });
 
   const req = mockFetch.mock.calls[0][0];
   expect(req.url).toBe("/tag");
@@ -59,7 +59,7 @@ test("my API call", async () => {
     baseUrl: "https://my-site.com/api/v1/",
   });
 
-  const { data, error } = await client.GET("/foo");
+  const { data, error } = await client.get("/foo");
 
   expect(data).toEqual(rawData);
   expect(error).toBeUndefined();

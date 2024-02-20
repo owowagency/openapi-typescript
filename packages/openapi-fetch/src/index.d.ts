@@ -186,21 +186,21 @@ export default function createClient<Paths extends {}>(
   clientOptions?: ClientOptions,
 ): {
   /** Call a GET endpoint */
-  GET: ClientMethod<Paths, "get">;
+  get: ClientMethod<Paths, "get">;
   /** Call a PUT endpoint */
-  PUT: ClientMethod<Paths, "put">;
+  put: ClientMethod<Paths, "put">;
   /** Call a POST endpoint */
-  POST: ClientMethod<Paths, "post">;
+  post: ClientMethod<Paths, "post">;
   /** Call a DELETE endpoint */
-  DELETE: ClientMethod<Paths, "delete">;
+  delete: ClientMethod<Paths, "delete">;
   /** Call a OPTIONS endpoint */
-  OPTIONS: ClientMethod<Paths, "options">;
+  options: ClientMethod<Paths, "options">;
   /** Call a HEAD endpoint */
-  HEAD: ClientMethod<Paths, "head">;
+  head: ClientMethod<Paths, "head">;
   /** Call a PATCH endpoint */
-  PATCH: ClientMethod<Paths, "patch">;
+  patch: ClientMethod<Paths, "patch">;
   /** Call a TRACE endpoint */
-  TRACE: ClientMethod<Paths, "trace">;
+  trace: ClientMethod<Paths, "trace">;
   /** Register middleware */
   use(...middleware: Middleware[]): void;
   /** Unregister middleware */

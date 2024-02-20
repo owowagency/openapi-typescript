@@ -27,7 +27,7 @@ export function getFact({
       // add any other hook dependencies here
     ],
     queryFn: async ({ signal }) => {
-      const { data, error } = await client.GET(GET_FACT, {
+      const { data, error } = await client.get(GET_FACT, {
         params,
         // body - isn’t used for GET, but needed for other request types
         signal, // allows React Query to cancel request
